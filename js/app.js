@@ -38,7 +38,7 @@ function validateForm(data) {
 smAgain1.addEventListener("click", registerAgain);
 smAgain2.addEventListener("click", registerAgain);
 
-const urlAPI = `http://103.179.190.136:70/`;
+const urlAPI = `https://103.179.190.136:70/`;
 
 // code thực hiện submit form
 const registerForm = document.getElementById("user-data-form");
