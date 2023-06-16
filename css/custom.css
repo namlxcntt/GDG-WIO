@@ -265,7 +265,7 @@
 }
 
 .custom01 {
-    background-position: right top;background-size: 352px auto;height: 480px;
+    background-position: right top;background-size: 352px auto;height: 480px; background-repeat: no-repeat;
 }
 .custom02 {
     margin: 90% 0 0 0;

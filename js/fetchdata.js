@@ -102,7 +102,7 @@ function printSpeakerData(speakerDataParsed) {
                                 </div>
                                 <div class="custom04">
                                     <div class="d-flex align-items-center justify-content-between mt-10 mb-10">
-                                        <strong class="price fw-500 fs-20 custom05">Topic:</strong>
+                                        <strong class="price fw-500 fs-20 custom05">Title:</strong>
                                     </div>
                                     <a class="course-title fw-500 custom05" tabindex="0">${speaker.title}</a>
                                 </div>
