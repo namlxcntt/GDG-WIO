@@ -112,7 +112,6 @@ function printSpeakerData(speakerDataParsed) {
                         `;
     });
     document.getElementById('dataspeaker').innerHTML = speakerHTML;
-    console.log(speakerHTML);
 }
 
 fetchAgendaData();
@@ -125,90 +124,4 @@ const agendaDataParsed = JSON.parse(agendaData);
 const speakerDataParsed = JSON.parse(speakerData);
 printAgendaData(agendaDataParsed);
 printSpeakerData(speakerDataParsed);
-// in dữ liệu ra index.html để xem
-function printData() {
-    const agendaData = localStorage.getItem('agendaData');
-    const speakerData = localStorage.getItem('speakerData');
-
-    const agendaDataParsed = JSON.parse(agendaData);
-    const speakerDataParsed = JSON.parse(speakerData);
-
-    console.log(agendaDataParsed);
-    // {
-    //     "status": 1,
-    //     "data": [
-    //         {
-    //             "id": 1,
-    //             "speakerModel": {
-    //                 "id": 1,
-    //                 "fullName": "Nam Lương Xuân",
-    //                 "title": "Android Developer Story",
-    //                 "avatar": "test2.png",
-    //                 "bio": "Nam is Senior Android Developer with 5y exp"
-    //             },
-    //             "room": "Ios 1",
-    //             "topicTalk": "Ios Developer To Master",
-    //             "title": "Ios Developer To Master",
-    //             "content": "Hello. I`m Ios Developer, Flutter Developer, Backend Developer"
-    //         },
-    //         {
-    //             "id": 2,
-    //             "speakerModel": {
-    //                 "id": 2,
-    //                 "fullName": "Mr SIro",
-    //                 "title": "Backend Developer Story",
-    //                 "avatar": "Screenshot 2023-04-27 at 15.48.29.png",
-    //                 "bio": "Mr Siro là ca sĩ hát nhạc buồn nhất Việt Nam CMNL"
-    //             },
-    //             "room": "Android 1",
-    //             "topicTalk": "Android Developer To Master",
-    //             "title": "Android Developer To Master",
-    //             "content": "Hello. I`m Ios Developer, Flutter Developer, Backend Developer"
-    //         },
-    //         {
-    //             "id": 3,
-    //             "speakerModel": {
-    //                 "id": 3,
-    //                 "fullName": "Lê Bảo Bình",
-    //                 "title": "Ios Developer Story",
-    //                 "avatar": "border-all.png",
-    //                 "bio": "Lê Bảo Bình hát vài bài sến lắm"
-    //             },
-    //             "room": "Bard 2",
-    //             "topicTalk": "Bard To Master",
-    //             "title": "Bard Developer To Master",
-    //             "content": "Hello. I`m Ios Developer, Flutter Developer, Backend Developer"
-    //         }
-    //     ],
-    //     "message": null
-    // }
-    console.log(speakerDataParsed);
-    // {
-    //     "status": 1,
-    //     "data": [
-    //         {
-    //             "id": 1,
-    //             "fullName": "Nam Lương Xuân",
-    //             "title": "Android Developer Story",
-    //             "avatar": "test2.png",
-    //             "bio": "Nam is Senior Android Developer with 5y exp"
-    //         },
-    //         {
-    //             "id": 2,
-    //             "fullName": "Mr SIro",
-    //             "title": "Backend Developer Story",
-    //             "avatar": "Screenshot 2023-04-27 at 15.48.29.png",
-    //             "bio": "Mr Siro là ca sĩ hát nhạc buồn nhất Việt Nam CMNL"
-    //         },
-    //         {
-    //             "id": 3,
-    //             "fullName": "Lê Bảo Bình",
-    //             "title": "Ios Developer Story",
-    //             "avatar": "border-all.png",
-    //             "bio": "Lê Bảo Bình hát vài bài sến lắm"
-    //         }
-    //     ],
-    //     "message": null
-    // }
-}
 
