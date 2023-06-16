@@ -263,3 +263,19 @@
 .button__tl:active {
     scale: 0.97;
 }
+
+.custom01 {
+    background-position: right top;background-size: 352px auto;height: 480px;
+}
+.custom02 {
+    margin: 90% 0 0 0;
+}
+.custom03 {
+    background-color: #428EFF; padding: 10px;border: 2px solid;border-radius: 20px;
+}
+.custom04 {
+    padding: 10px;background-color: #202124;border-radius: 20px; margin: 10px 0 0 0;
+}
+.custom05 {
+    color: #fff !important;
+}
