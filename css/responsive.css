@@ -4,6 +4,7 @@
   .countdown img {height: 85px;}
   .countdown span1 {font-size: 20px;padding: 0 20px;margin: 0 20px;}
   .cdwn {margin: 5% 0; scale: 1.5;}
+  .title-style-one>img {margin: 0 0 15% 29%; scale: 1.6;}
 }
 /*(min-width: 992px)*/
 
@@ -953,5 +954,6 @@
   .blog-comment-area .comment .reply-btn {position: relative;}
   .countdown img {height: 30px;}
   .countdown span1 {font-size: 20px;padding: 0 10px;margin: 0 10px;}
+  .title-style-one>img {margin: 0 0 10% 5%; scale: 1.1;}
 }
 /*(max-width: 575px)*/
