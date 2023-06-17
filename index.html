@@ -255,15 +255,15 @@
 			============================================== 
 			-->
             </div>
-            <div>
-                <div class="fancy-feature-fiftyTwo mt-100 lg-mt-80">
+            <div class="mt-100 lg-mt-80">
+                <div class="fancy-feature-fiftyTwo ">
                     <div class="container">
-                        <div class="d-flex align-items-center justify-content-center">
+                        <div class="iframe-container d-flex align-items-center justify-content-center">
                             <!-- <a class="fancybox video-icon tran3s rounded-circle d-flex align-items-center justify-content-center"
                                 data-fancybox="" href="https://www.youtube.com/embed/cNfINi5CNbY">
                                 <img src="images/lazy.svg" data-src="images/icon/icon_140.svg" alt="" class="lazy-img">
                             </a> -->
-                            <iframe width="1120" height="630" style="border-radius: 20px; scale: 1.1;"
+                            <iframe class="responsive-iframe"
                                 src="https://www.youtube.com/embed/cNfINi5CNbY" title="YouTube video player"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -280,7 +280,7 @@
 			============================================== 
 			-->
                 <div
-                    class="fancy-feature-fortyOne position-relative pt-130 pb-180 lg-pt-80 lg-pb-80 xs-mt-120 wow fadeInUp">
+                    class="fancy-feature-fortyOne position-relative pt-130 pb-100 lg-pt-80 lg-pb-80 xs-mt-120 wow fadeInUp">
                     <div class="container">
                         <div class="wrapper position-relative" id="speakers">
                             <div class="title-style-one mb-30">
@@ -289,42 +289,14 @@
                             <div class="slider-wrapper">
                                 <div class="tab-content position-relative zn2 wow fadeInUp">
                                     <div class="tab-pane active show" id="sp1">
-                                        <div class="course_slider_one" id="dataspeaker">
-                                            <!-- <div class="item">
-                                                <div class="card-style-twenty"
-                                                    style="background-image: url(images/logo/Rectangle.png);background-position: right top;background-size: 352px auto;height: 480px; background-repeat: no-repeat;">
-                                                    <div class="">
-                                                        <img src="" alt="" class="w-100">
-                                                    </div>
-                                                    <div class="course-data" style="margin: 90% 0 0 0;">
-                                                        <div class="d-flex align-items-center justify-content-between">
-                                                            <div class="course-by fs-17" style="background-color: #428EFF; padding: 10px;border: 2px solid;border-radius: 20px;">Matt Waddell
-                                                            </div>
-                                                        </div>
-                                                        <div style="padding: 10px;background-color: #202124;border-radius: 20px; margin: 10px 0 0 0;">
-                                                            <a class="course-title fw-500" tabindex="0" style="color: #fff;">What's new in Google Pay and Google Wallet </a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mt-10 mb-10">
-                                                                <strong class="price fw-500 fs-20" style="color: #fff;">Topic:
-                                                                    Web</strong>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
+                                        <div class="speaker-container" id="dataspeaker">
+                                            
                                         </div> <!-- /.course_slider_one -->
                                     </div> <!-- /.tab-pane -->
                                 </div> <!-- /.tab-content -->
                             </div> <!-- /.slider-wrapper -->
                         </div> <!-- /.slider-wrapper -->
 
-                        <ul class="slider-arrows slick-arrow-six d-flex justify-content-center style-none mt-40">
-                            <li class="prev_cs1 slick-arrow tran3s" style="padding: 10px;"><i
-                                    class="bi bi-arrow-left"></i></li>
-                            <li class="next_cs1 slick-arrow tran3s" style="padding: 10px;"><i
-                                    class="bi bi-arrow-right"></i></li>
-                        </ul>
                     </div> <!-- /.wrapper -->
                 </div>
             </div> <!-- /.fancy-feature-fortyTwo -->
@@ -342,6 +314,24 @@
             </div>
         </div>
         <style>
+            .iframe-container {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                padding-top: 56.25%;
+            }
+
+            .responsive-iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+
             .entries {
                 width: calc(100% - 80px);
                 max-width: 800px;
@@ -595,12 +585,9 @@
                     </div> <!-- /.bottom-footer -->
                 </div> <!-- /.container -->
             </div> <!-- /.footer-style-eleven -->
-            
-            
+
+
             <!-- Optional JavaScript _____________________________  -->
-            <!-- app -->
-            <script src="js/app.js"></script>
-            <script src="js/fetchdata.js"></script>
 
             <!-- jQuery first, then Bootstrap JS -->
             <!-- jQuery -->
@@ -635,6 +622,11 @@
             <!-- recaptcha -->
             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+            <!-- app -->
+            <script src="js/app.js"></script>
+
+            <!-- speaker -->
+            <script src="js/fetchdata.js"></script>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         </div> <!-- /.main-page-wrapper -->

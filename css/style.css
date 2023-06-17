@@ -6398,10 +6398,31 @@ body .btn-twentySix:hover:after {top: 0; left: 0;}
 .card-style-twenty {
   padding: 16px;
   border: 1px solid #000;
-  border-radius: 10px;
-  background: #fff;
+  border-radius: 20px;
+  /* background: #fff; */
+  background-color: #428EFF;
 }
-.card-style-twenty:hover {background: #fbf1ea;}
+
+.speaker-container {
+  display: grid;
+  gap: 150px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.course-data {
+  margin: 31px 0;
+  color: #000;
+  font-size: 2rem;
+}
+
+.speaker-image {
+  border: 10px solid #000;
+  border-radius: 20px;
+  height: 256px;
+  object-fit: cover;
+  width: 100%;
+}
+/* .card-style-twenty:hover {background: #fbf1ea;} */
 .card-style-twenty .img-meta {
   border: 1px solid #000;
   border-radius: 8px;

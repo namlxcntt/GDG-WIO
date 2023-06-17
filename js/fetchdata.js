@@ -71,7 +71,7 @@ function fetchSpeakerData() {
 
 function printAgendaData(agendaDataParsed) {
     let timelineHTML = '';
-    agendaDataParsed.data.forEach((agenda) => {
+    agendaDataParsed?.data.forEach((agenda) => {
         timelineHTML += `
             <div class="entry">
                 <div class="title">${agenda.room}</div>
@@ -85,32 +85,31 @@ function printAgendaData(agendaDataParsed) {
     document.getElementById('datatimeline').innerHTML = timelineHTML;
 }
 
+const bgColor = ['#428EFF', '#FFBB01', '#FF5145']
+const BG_COLOR_NUMB = 3
+
 function printSpeakerData(speakerDataParsed) {
     let speakerHTML = '';
-    speakerDataParsed.data.forEach((speaker) => {
-        speakerHTML += `
-                    <div class="item">
-                        <div class="card-style-twenty custom01"
-                            style="background-image: url(${urlAPI}api/check-in/images/${speaker.avatar});">
-                            <div class="">
-                                <img src="" alt="" class="w-100">
-                            </div>
-                            <div class="course-data custom02">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="course-by fs-17 custom03">${speaker.fullName}
-                                    </div>
-                                </div>
-                                <div class="custom04">
-                                    <div class="d-flex align-items-center justify-content-between mt-10 mb-10">
-                                        <strong class="price fw-500 fs-20 custom05">Title:</strong>
-                                    </div>
-                                    <a class="course-title fw-500 custom05" tabindex="0">${speaker.title}</a>
-                                </div>
+    speakerDataParsed?.data.forEach((speaker, index) => {
+        speakerHTML += `                
+            <div class="item">
+                <div class="card-style-twenty" style="background-color: ${bgColor[index%BG_COLOR_NUMB]}">
+                    <img src="${urlAPI}api/check-in/images/${speaker.avatar}" alt="" class="speaker-image">
+                    <div class="course-data" >
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="course-by fw-bold">${speaker.fullName}</p>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mt-10 mb-10">
+                                <strong class="price fw-500 fs-20">Topic: ${speaker.title}</strong>
                             </div>
                         </div>
                     </div>
-                        `;
+                </div>
+            </div>
+        `;
     });
+
     document.getElementById('dataspeaker').innerHTML = speakerHTML;
 }
 
