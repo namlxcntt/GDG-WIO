@@ -18,25 +18,6 @@
 }
 
 
-/* .countdown span1:nth-child(0)::before {
-    content: "Days";
-    font-size: 50px;
-    padding: 0 20px;
-    margin: 0 20px;
-}
-.countdown span1:nth-child(1)::before {
-    content: "Hours";
-    font-size: 50px;
-    padding: 0 20px;
-    margin: 0 20px;
-}
-.countdown span1:nth-child(2)::before {
-    content: "Minutes";
-    font-size: 50px;
-    padding: 0 20px;
-    margin: 0 20px;
-} */
-
 .timeline {
     display: flex;
     margin: 0 auto;

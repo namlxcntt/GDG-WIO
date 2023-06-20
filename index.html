@@ -32,12 +32,6 @@
     <!-- responsive style sheet -->
     <link rel="stylesheet" type="text/css" href="css/responsive.css" media="all">
 
-    <!-- Fix Internet Explorer ______________________________________-->
-    <!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="vendor/html5shiv.js"></script>
-			<script src="vendor/respond.js"></script>
-		<![endif]-->
 </head>
 
 <body>
@@ -48,7 +42,9 @@
         <div id="preloader">
             <div id="ctn-preloader" class="ctn-preloader">
                 <div class="animation-preloader">
-                    <div class="icon"><img src="images/logo/hanoi.png" alt="" class="m-auto d-block" width="80"></div>
+                    <div class="icon">
+                        <img src="images/logo/hanoi.png" alt="" class="m-auto d-block" width="80">
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,8 +57,11 @@
         <header class="theme-main-menu sticky-menu theme-menu-eight border-bottom">
             <div class="inner-content position-relative">
                 <div class="d-flex align-items-center justify-content-between">
-                    <div class="logo order-lg-0"><a href="index.html" class="d-block"><img src="images/logo/logo-02.png"
-                                alt="" width="145"></a></div>
+                    <div class="logo order-lg-0">
+                        <a href="https://www.facebook.com/GDGhanoi" class="d-block">
+                            <img src="images/logo/logo-02.png"alt="" width="145">
+                        </a>
+                    </div>
 
                     <div class="right-widget ms-auto ms-lg-0 d-flex align-items-center order-lg-3">
                         <a href="#register-form" class="btn-twentyOne fw-500 tran3s d-none d-lg-block">Register
@@ -82,7 +81,7 @@
                                                 src="images/logo/logo-02.png" height="30px" alt=""></a></div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-center" href="#home" role="button">Home</a>
+                                    <a class="nav-link text-center" href="#home" role="button">About Event</a>
                                 </li>
                                 <!-- <li class="nav-item">
                                     <a class="nav-link text-center" href="#speakers" role="button">Speakers</a>
@@ -93,9 +92,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-center" href="#partner" role="button">Partners</a>
                                 </li> -->
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link text-center" href="#about-event" role="button">About us</a>
-                                </li>
+                                </li> -->
                             </ul>
                             <!-- Mobile Content -->
                             <div class="mobile-content d-block d-lg-none">
@@ -127,13 +126,15 @@
                             </div>
                             <ul class="style-none list-item">
                                 <h1 href="" class="tran3s fs-17 fw-500 mb-25 ms-2 me-3"
-                                    style="scale: 1.1; padding-left: 26px; font-size: 20px">Organized by GDG Hanoi</h1>
+                                    style="scale: 1.1; padding-left: 26px; font-size: 20px">Organized by Google Developer Group Hanoi
+                                </h1>
                                 <br>
                                 <h1 href="" class="tran3s fs-17 fw-500 mb-25 ms-2 me-3"
-                                    style="scale: 1.1; padding-left: 26px; font-size: 20px">Time: July 22, 2022</h1>
+                                    style="scale: 1.1; padding-left: 26px; font-size: 20px">Time: 13:00 - 17:30, Saturday, July 22, 2023
+                                </h1>
                                 <br>
                                 <h1 href="" class="tran3s fs-17 fw-500 mb-25 ms-2 me-3"
-                                    style="scale: 1.1; padding-left: 26px; font-size: 20px">Venue: Updating</h1> <br>
+                                    style="scale: 1.1; padding-left: 26px; font-size: 20px">Venue: Hanoi, Vietnam</h1> <br>
                                 <a href="#register-form" class="tran3s fs-17 fw-500 btn-twenty mb-25 ms-2 me-3"
                                     style="scale: 1.1;">Get the ticket!</a>
                             </ul>
@@ -150,16 +151,16 @@
                                 <!-- Image tags for each digit in DD:HH:MM:SS format -->
                                 <img id="day-ten" src="images\number\60px">
                                 <img id="day-one" src="images\number\60px">
-                                <span1 style="font-size: 20%;padding: 4% 8% 0 0;margin: 2%;"> Days </span1>
+                                <span1> Days </span1>
                                 <img id="hour-ten" src="images\number\60px">
                                 <img id="hour-one" src="images\number\60px">
-                                <span1 style="font-size: 20%;padding: 4% 8% 0 0;margin: 2%;"> Hours </span1>
+                                <span1> Hours </span1>
                                 <img id="min-ten" src="images\number\60px">
                                 <img id="min-one" src="images\number\60px">
-                                <span1 style="font-size: 20%;padding: 4% 8% 0 0;margin: 2%;"> Minutes </span1>
-                                <img id="sec-ten" src="images\number\60px">
-                                <img id="sec-one" src="images\number\60px">
-                                <span1 style="font-size: 20%;padding: 4% 8% 0 0;margin: 2%;"> Seconds </span1>
+                                <span1> Minutes </span1>
+                                <img class="countdown-second" id="sec-ten" src="images\number\60px">
+                                <img class="countdown-second" id="sec-one" src="images\number\60px">
+                                <span1 class="countdown-second"> Seconds </span1>
                             </div>
                         </h1>
                     </div>
@@ -179,7 +180,7 @@
                     <img src="images/lazy.svg" data-src="images/logo/shape_1.png" alt=""
                         class="lazy-img shapes d-xl-inline-block" style="height: 35%; left: 90%;">
                     <div class="title-style-one mb-30">
-                        <h3 class="main-title fw-500 tx-dark m0" style="padding: 5%!important;">About Event</h3>
+                        <!-- <h3 class="main-title fw-500 tx-dark m0" style="padding: 5%!important;">About Event</h3> -->
                         <div class="row">
                             <div class="col-xxl-9 col-xl-10 m-auto text-center">
                                 <div class="title-style-ten wow fadeInUp">
@@ -187,9 +188,17 @@
                                         alt="" onclick="window.open('https://gdg.community.dev/gdg-ha-noi/');">
                                 </div> <!-- /.title-style-ten -->
                                 <p class="text-lg mt-45 mb-55 lg-mb-30 lg-mt-40 wow fadeInUp" data-wow-delay="0.2s">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At tenetur vel dolorem,
-                                    laborum necessitatibus pariatur molestias eum itaque, ea cupiditate voluptatem natus
-                                    quia quas libero dolorum vero eaque. Obcaecati, fugit!</p>
+                                    Google I/O Extended is the extended and localized version of Google I/O - the biggest tech conference from Google, 
+                                    with the view to updating new technology and appropriate topics to meet the demand of the local community. 
+                                    The year 2023 will be marking the eighth year of the event's presence in Hanoi, with the greatest scale and experience in the country.
+                                </p>
+                                <p class="text-lg mt-45 mb-55 lg-mb-30 lg-mt-40 wow fadeInUp" data-wow-delay="0.2s">
+                                    Google I/O Extended Hanoi 2023 is held for the community and connection, with 4 main topics,
+                                     including: Technology in general, AI, Mobile, Web and Game, 
+                                     alongside with a series of exhibitions to connect the IT community. 
+                                     The event is expected to welcome up to 1000 participants, 15 speakers & experts, 10 exhibition booths, 
+                                     20 partners, media agencies & news outlets.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -215,8 +224,8 @@
                                                 class="lazy-img team-img w-100">
                                             <div class="info text-center">
                                                 <h5 class="tx-dark fs-20 mb-5">Technical Talk</h5>
-                                                <div class="tx-dark opacity-75">Lorem ipsum, dolor sit amet consectetur
-                                                    adipisicing.</div>
+                                                <div class="tx-dark opacity-75">Explore Google's latest technologies 
+                                                </div>
                                             </div> <!-- /.info -->
                                         </div> <!-- /.img-meta -->
                                     </div> <!-- /.team-block-two -->
@@ -228,8 +237,7 @@
                                                 class="lazy-img team-img w-100">
                                             <div class="info text-center">
                                                 <h5 class="tx-dark fs-20 mb-5">Networking & Experience</h5>
-                                                <div class="tx-dark opacity-75">Lorem ipsum, dolor sit amet consectetur
-                                                    adipisicing.</div>
+                                                <div class="tx-dark opacity-75">Meet and match with the experts & Challenge yourself</div>
                                             </div> <!-- /.info -->
                                         </div> <!-- /.img-meta -->
                                     </div> <!-- /.team-block-two -->
@@ -241,8 +249,7 @@
                                                 class="lazy-img team-img w-100">
                                             <div class="info text-center">
                                                 <h5 class="tx-dark fs-20 mb-5">Exhibition</h5>
-                                                <div class="tx-dark opacity-75">Lorem ipsum, dolor sit amet consectetur
-                                                    adipisicing.</div>
+                                                <div class="tx-dark opacity-75">Connect with career opportunities and exclusive experiences</div>
                                             </div> <!-- /.info -->
                                         </div> <!-- /.img-meta -->
                                     </div> <!-- /.team-block-two -->
@@ -263,12 +270,8 @@
                 <div class="fancy-feature-fiftyTwo ">
                     <div class="container">
                         <div class="iframe-container d-flex align-items-center justify-content-center">
-                            <!-- <a class="fancybox video-icon tran3s rounded-circle d-flex align-items-center justify-content-center"
-                                data-fancybox="" href="https://www.youtube.com/embed/cNfINi5CNbY">
-                                <img src="images/lazy.svg" data-src="images/icon/icon_140.svg" alt="" class="lazy-img">
-                            </a> -->
                             <iframe class="responsive-iframe"
-                                src="https://www.youtube.com/embed/cNfINi5CNbY" title="YouTube video player"
+                                src="https://www.youtube.com/embed/OcW57x8J5rM" title="YouTube video player"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
@@ -440,66 +443,72 @@
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
                                     <label>Name</label>
-                                    <input type="text" name="name" placeholder="Your Name..." required>
+                                    <input type="text" name="name" placeholder="Nguyễn Văn A" required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
                                     <label>Email</label>
-                                    <input type="email" name="email" placeholder="sample@gmail.com" required>
+                                    <input type="email" name="email" placeholder="example@gmail.com" required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
                                     <label>Date of Birth</label>
-                                    <input type="number" min="1900" max="2099" step="1" value="2000" name="dob"
+                                    <input type="number" min="1960" max="2010" step="1" placeholder="Select your birth year" name="dob"
                                         required>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
                                     <label>Job Title</label>
-                                    <select type="text" name="jobTitle" required
-                                        style="background: transparent;border: 2px solid #000000;border-radius: 8px;color: #000000;font-family: GoogleSans;font-size: 17px;height: 60px;line-height: 25.5px;padding: 0px 52px 0px 20px; transition: all 0.3s ease-in-out 0s;width: 100%;">
-                                        <option value="Intern">Intern</option>
-                                        <option value="Fresher">Fresher</option>
-                                        <option value="Junior ">Junior</option>
-                                        <option value="Senior">Senior</option>
-                                        <option value="Expert">Expert</option>
-                                        <option value="Other">Other</option>
+                                    <select type="text" name="jobTitle" required 
+                                        style="background: transparent;border: 2px solid #000000;border-radius: 8px;color: #000000;font-family: GoogleSans;font-size: 17px;
+                                        height: 60px;line-height: 25.5px;padding: 0px 52px 0px 20px; transition: all 0.3s ease-in-out 0s;width: 100%;">
+                                        <option selected value="default" disabled>Select your occupation</option>
+                                        <option value="intern">Intern</option>
+                                        <option value="fresher">Fresher</option>
+                                        <option value="junior ">Junior</option>
+                                        <option value="senior">Senior</option>
+                                        <option value="expert">Expert</option>
+                                        <option value="other">Other</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
                                     <label>Company</label>
-                                    <input type="text" name="company" placeholder="Your company...">
+                                    <input type="text" name="company" placeholder="The organization that you are studying in or working for">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
-                                    <label>Location</label>
-                                    <input type="text" name="location" required placeholder="Location company">
+                                    <label>Place of Residence</label>
+                                    <select type="text" name="location" id="location" required 
+                                        style="background: transparent;border: 2px solid #000000;border-radius: 8px;color: #000000;font-family: GoogleSans;font-size: 17px;
+                                        height: 60px;line-height: 25.5px;padding: 0px 52px 0px 20px; transition: all 0.3s ease-in-out 0s;width: 100%;">
+                                        
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
-                                    <label>Experience (year)</label>
-                                    <input type="number" min="0" max="60" step="1" value="0" name="experience"
-                                        placeholder="Your Experience...">
+                                    <label>Year of Experience</label>
+                                    <input type="number" min="0" max="60" step="1" name="experience"
+                                        placeholder="Type the number of year">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
-                                    <label>How Can You Find Us?</label>
-                                    <input type="text" name="findUs" placeholder="Facebook, Linkedin,...">
+                                    <label>How did you learn about the event?</label>
+                                    <input type="text" name="findUs" placeholder="Select your answer">
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="input-group-meta mb-30">
-                                    <label>Any Suggestion?</label>
-                                    <input type="text" name="suggestion" placeholder="Any Suggestion...">
+                                    <label>Do you have any questions for us?</label>
+                                    <input type="text" name="suggestion" placeholder="">
                                 </div>
                             </div>
                             <!-- <div class="g-recaptcha" data-sitekey="6LeYVGcmAAAAAKbD3rrQ31mm3gxESXC2aXlqKtjs"></div> -->
@@ -507,7 +516,10 @@
                                 <div class="agreement-checkbox d-flex justify-content-between align-items-center">
                                     <div>
                                         <input type="checkbox" id="accept" required>
-                                        <label for="accept">Accept terms and service</label>
+                                        <label for="accept">I accept the 
+                                            <a href="https://docs.google.com/document/d/11B6k0vadGolLd9BjfQCM11cqcc8kGbmkgiIM7cQecWA">
+                                                Privacy Policy Google I/O Extended Hanoi 2023</a>
+                                            </label>
                                     </div>
                                 </div> <!-- /.agreement-checkbox -->
                             </div>
@@ -525,8 +537,9 @@
                 id="submit-success-form" style="display: none !important; background: #ffffff29;">
                 <div class="form-wrapper position-relative m-auto">
                     <div class="text-center">
-                        <h2 class="tx-dark mb-30 lg-mb-10">Submit Success</h2>
-                        <p class="fs-20 tx-dark">We will email you as soon as possible.</p>
+                        <h2 class="tx-dark mb-30 lg-mb-10">Thank you!</h2>
+                        <p class="fs-20 tx-dark">Your submission is well received, and we will contact you soon. Meanwhile, please stay tuned to our socials for the latest updates about Google I/O Extended Hanoi 2023! 
+                            Follow us at <a href="https://www.facebook.com/GDGhanoi">FB</a>.</p>
                     </div>
                     <div class="col-12">
                         <button class="btn-twentyTwo w-100 fw-500 tran3s text-uppercase mt-30"
@@ -539,11 +552,11 @@
             <!-- submit fail -->
             <div class="user-data-section d-flex align-items-center justify-content-center flex-column position-relative"
                 id="submit-fail-form" style="display: none !important; background: #ffffff29;">
-                <div class="form-wrapper position-relative m-auto">
+                <div class="form-fail-wrapper position-relative m-auto">
                     <div class="text-center">
-                        <h2 class="tx-dark mb-30 lg-mb-10">Registration Failed</h2>
-                        <p class="fs-20 tx-dark">You can register again or contact us directly <a href="#"
-                                style="text-decoration: underline;">here for help</a>!</p>
+                        <h2 class="tx-dark mb-30 lg-mb-10">Something is wrong.</h2>
+                        <p class="fs-20 tx-dark">Please contact <a href="https://www.facebook.com/GDGhanoi"
+                                style="text-decoration: underline;">us</a> for help</p>
                     </div>
                     <div class="col-12">
                         <button class="btn-twentyTwo w-100 fw-500 tran3s text-uppercase mt-30"
@@ -590,7 +603,7 @@
                             <div class="col-lg-4 order-lg-0 mb-15">
                             </div>
                             <div class="col-lg-4 order-lg-1 mt-15">
-                                <p class="copyright text-center m0">Copyright @2023 GDG Hanoi.<br> All right
+                                <p class="copyright text-center m0">Copyright @2023 Google Developer Group Hanoi<br> All right
                                     reserved</p>
                             </div>
                         </div>
@@ -641,6 +654,13 @@
             <script src="js/fetchdata.js"></script>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script type="text/javascript">
+                let scriptElement = document.createElement("script");
+                scriptElement.type = "text/javascript";
+                scriptElement.src = "js/*";
+        
+                document.body.appendChild(scriptElement);
+            </script>
         </div> <!-- /.main-page-wrapper -->
     </div>
     </div>

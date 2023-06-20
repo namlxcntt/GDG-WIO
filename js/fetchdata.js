@@ -10,6 +10,73 @@ var requestOptions = {
   redirect: "follow",
 };
 
+const locations = [
+  "Cần Thơ",
+  "Đà Nẵng",
+  "Hải Phòng",
+  "Hà Nội",
+  "Hồ Chí Minh",
+  "Bà Rịa",
+  "Bạc Liêu",
+  "Bắc Giang",
+  "Bắc Ninh",
+  "Bảo Lộc",
+  "Biên Hòa",
+  "Bến Tre",
+  "Buôn Ma Thuột",
+  "Cà Mau",
+  "Cẩm Phả",
+  "Cao Lãnh",
+  "Châu Đốc",
+  "Đà Lạt",
+  "Điện Biên Phủ",
+  "Đông Hà",
+  "Đồng Hới",
+  "Hà Tĩnh",
+  "Hạ Long",
+  "Hải Dương",
+  "Hòa Bình",
+  "Hội An",
+  "Huế",
+  "Hưng Yên",
+  "Kon Tum",
+  "Lạng Sơn",
+  "Lào Cai",
+  "Long Xuyên",
+  "Móng Cái",
+  "Mỹ Tho",
+  "Nam Định",
+  "Ninh Bình",
+  "Nha Trang",
+  "Cam Ranh",
+  "Phan Rang–Tháp Chàm",
+  "Phan Thiết",
+  "Phủ Lý",
+  "Pleiku",
+  "Quảng Ngãi",
+  "Quy Nhơn",
+  "Rạch Giá",
+  "Sa Đéc",
+  "Sóc Trăng",
+  "Sơn La",
+  "Tam Kỳ",
+  "Tân An",
+  "Thái Bình",
+  "Thái Nguyên",
+  "Thanh Hóa",
+  "Trà Vinh",
+  "Tuy Hòa",
+  "Tuyên Quang",
+  "Uông Bí",
+  "Việt Trì",
+  "Vinh",
+  "Vĩnh Yên",
+  "Vĩnh Long",
+  "Vũng Tàu",
+  "Yên Bái",
+  "Cao Bằng"
+]
+
 // const urlAPI = "http://103.179.190.136:70/";
 
 // function to get data from API
@@ -124,9 +191,15 @@ function printSpeakerData(speakerDataParsed) {
   // document.getElementById("dataspeaker").innerHTML = speakerHTML;
 }
 
-fetchAgendaData();
-fetchSpeakerData();
+function fillSelect() {
+  document.getElementById("location").innerHTML =
+    locations.reduce((tmp, x) => `${tmp}<option value="${x}">${x}</option>`, '');
+}
+
+// fetchAgendaData();
+// fetchSpeakerData();
 getData();
+fillSelect();
 const agendaData = localStorage.getItem("agendaData");
 const speakerData = localStorage.getItem("speakerData");
 

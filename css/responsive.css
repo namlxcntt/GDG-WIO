@@ -953,7 +953,7 @@
   .pr-pagination-one i {font-size: 25px;}
   .blog-comment-area .comment .reply-btn {position: relative;}
   .countdown img {height: 30px;}
-  .countdown span1 {font-size: 20px;padding: 0 10px;margin: 0 10px;}
+  .countdown span1 {font-size: 12px;padding: 0 10px;margin: 0 10px;}
   .title-style-one>img {margin: 0 0 10% 5%; scale: 1.1;}
 }
 /*(max-width: 575px)*/
