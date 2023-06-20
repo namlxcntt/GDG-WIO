@@ -27,7 +27,6 @@ function changeDiv(param) {
 
 const env = {
   bearer: "MIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQB07Z4rZ2zCNvoDLdWBelPi2fhccjNzLgY4YCLttk6qK7dJvpduQNXXBWyL0FGOQ4wg7V6M9KSXMeLO3sQI/erRTcObFzEZK1pHwtzx4PBi6cpD8HgqwmqicNXmjBWZPvMQH5YBUY0gXGr5bW0B1zLzheMUGTt2Ulch/5fUMzjBMEIqckYEThj54SQrx0ofMHYk3oPKdsSqbU/LQ0yY06HwB/RWJN6PemPzhJqnvw65EsFdiYnkmdjxIyuUhCmm1XGzmvOGp/3D+AF46fTJwf5/Bkj2EVJLW1iJvj7Clgrem155Ejde93ktqfobcqpwp9FN4IVWqiTu5P/+suamJZyZAgMBAAE=",
-  token:"MIGeMA0GCSqGSIb3DQCBAQUAA4GMADCBiBKBgHgsg8vJvRvBxoxvaURjikPbyqCm==="
 }
 
 function validateForm(data) {
@@ -70,13 +69,13 @@ registerForm.addEventListener("submit", (event) => {
     const xhr = new XMLHttpRequest();
     xhr.open("POST", `${urlAPI}`);
     xhr.setRequestHeader(
-      "Authentication",
+      "Authorization",
       `Bearer ${env.bearer}`
     );
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader(
       "token_form_dev",
-      `${env.token}`
+      `${env.bearer}`
     );
     xhr.onload = function () {
       if (xhr.status === 200) {
