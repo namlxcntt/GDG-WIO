@@ -10611,3 +10611,29 @@ body .btn-twentySix:hover:after {
     width: 100%;
   }
 }
+
+
+#popupContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Make sure the popup appears on top of other elements */
+}
+
+#popupContent {
+  background-color: #fff; /* Background color of the popup */
+  padding: 40px;
+  height: 80vh;
+  margin-top: 8px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Border style */
+  border-radius: 10px; /* Rounded corners */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

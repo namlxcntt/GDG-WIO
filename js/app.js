@@ -37,6 +37,7 @@ function validateForm(data) {
     return false;
   }
 
+
   return true;
 }
 
@@ -90,3 +91,9 @@ registerForm.addEventListener("submit", (event) => {
     xhr.send(JSON.stringify(data));
   }
 });
+
+function onClickUnderStood() {
+  let checkbox = document.getElementById("accept");
+  checkbox.checked = true;
+  console.log(checkbox);
+}
