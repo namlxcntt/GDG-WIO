@@ -49,14 +49,9 @@ const inputsContainer = document.getElementById("form-container");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(form);
-  validateField(form, "name");
-  validateField(form, "email");
-  validateField(form, "dob");
-  validateField(form, "location");
-  validateField(form, "jobTitle");
-  validateField(form, "yoe");
-  validateField(form, "term");
-  validateField(form, "company");
+
+  const isTermValid = validateField(form, "term");
+  if (!isTermValid) return;
   const data = {
     fullName: formData.get("name"),
     email: formData.get("email"),
@@ -94,7 +89,6 @@ form.addEventListener("submit", (event) => {
 function onClickUnderStood() {
   let checkbox = document.getElementById("accept");
   checkbox.checked = true;
-  console.log(checkbox);
 }
 
 function validateField(form, fieldName) {
@@ -119,9 +113,7 @@ function validateField(form, fieldName) {
       case "yoe":
         errorEl.textContent = "Year of experience is required";
         break;
-      case "term":
-        errorEl.textContent = "Term is required";
-        break;
+
       case "company":
         errorEl.textContent = "Company is required";
         break;
@@ -129,10 +121,16 @@ function validateField(form, fieldName) {
 
     return false;
   }
+
+  if (fieldName === "term" && !form.elements[fieldName].checked) {
+    errorEl.textContent = "Term is required";
+    return false;
+  }
+
   errorEl.textContent = "";
   return true;
 }
 
 inputsContainer.addEventListener("focusout", (event) => {
-  validateField(form, event.target.name);
+  if (event.target.name !== "term") validateField(form, event.target.name);
 });
