@@ -85,7 +85,8 @@
                                         src="images/logo/logo-02.png" height="30px" alt=""></a></div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-center" href="#home" role="button">About Event</a>
+                                <a class="nav-link text-center" href="#home" role="button">About Google I/O Extended
+                                </a>
                             </li>
                             <!-- <li class="nav-item">
                                 <a class="nav-link text-center" href="#speakers" role="button">Speakers</a>
@@ -454,17 +455,19 @@
             </div>
 
             <form action="" method="POST" id="user-data-form" class="user-data-form mt-40 lg-mt-30">
-                <div class="row">
+                <div id="form-container" class="row">
                     <div class="col-12">
                         <div class="input-group-meta mb-30">
                             <label>Name</label>
                             <input type="text" name="name" placeholder="Nguyễn Văn A" required>
+                            <span class="error-msg text-warning" id="nameError"></span>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="input-group-meta mb-30">
                             <label>Email</label>
                             <input type="email" name="email" placeholder="example@gmail.com" required>
+                            <span class="error-msg text-warning" id="emailError"></span>
                         </div>
                     </div>
                     <div class="col-12">
@@ -473,6 +476,7 @@
                             <input type="number" min="1960" max="2010" step="1" placeholder="Select your birth year"
                                    name="dob"
                                    required>
+                            <span class="error-msg text-warning" id="dobError"></span>
                         </div>
                     </div>
                     <div class="col-12">
@@ -489,6 +493,7 @@
                                 <option value="expert">Expert</option>
                                 <option value="other">Other</option>
                             </select>
+                            <span class="error-msg text-warning" id="jobTitleError"></span>
                         </div>
                     </div>
                     <div class="col-12">
@@ -496,6 +501,7 @@
                             <label>Company</label>
                             <input type="text" name="company"
                                    placeholder="The organization that you are studying in or working for">
+                            <span class="error-msg text-warning" id="companyError"></span>
                         </div>
                     </div>
                     <div class="col-12">
@@ -506,13 +512,15 @@
                                         height: 60px;line-height: 25.5px;padding: 0px 52px 0px 20px; transition: all 0.3s ease-in-out 0s;width: 100%;">
 
                             </select>
+                            <span class="error-msg text-warning" id="locationError"></span>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="input-group-meta mb-30">
                             <label>Year of Experience</label>
-                            <input type="number" min="0" max="60" step="1" name="experience"
-                                   placeholder="Type the number of year">
+                            <input type="number" min="0" max="60" step="1" name="yoe"
+                                   placeholder="Type the number of year" required>
+                            <span class="error-msg text-warning" id="yoeError"></span>
                         </div>
                     </div>
                     <div class="col-12">
@@ -532,11 +540,12 @@
                     <div class="col-12">
                         <div class="agreement-checkbox d-flex justify-content-between align-items-center">
                             <div>
-                                <input type="checkbox" id="accept" required>
+                                <input type="checkbox" id="accept" required name="term">
                                 <label for="accept">I accept the
                                     <a data-bs-toggle="modal" data-bs-target="#policyPopup">
                                         Privacy Policy Google I/O Extended Hanoi 2023</a>
                                 </label>
+                                <span class="error-msg text-warning" id="termError"></span>
                             </div>
                         </div> <!-- /.agreement-checkbox -->
                     </div>

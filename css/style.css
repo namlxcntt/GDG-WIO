@@ -9958,11 +9958,14 @@ body .btn-twentySix:hover:after {
   background: transparent;
 }
 .user-data-section .input-group-meta label {
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 500;
   color: #333;
   display: block;
   margin-bottom: 6px;
+}
+.error-msg {
+  font-size: 12px;
 }
 .user-data-section .input-group-meta .placeholder_icon {
   position: absolute;
@@ -10636,4 +10639,8 @@ body .btn-twentySix:hover:after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.main-page-wrapper, .container {
+  font-family: 'GoogleSans';
 }

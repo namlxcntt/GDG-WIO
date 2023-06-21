@@ -79,66 +79,6 @@ const locations = [
 
 // const urlAPI = "http://103.179.190.136:70/";
 
-// function to get data from API
-function getData() {
-  const agendaData = localStorage.getItem("agendaData");
-  const speakerData = localStorage.getItem("speakerData");
-
-  if (agendaData && speakerData) {
-    const agendaDataParsed = JSON.parse(agendaData);
-    const speakerDataParsed = JSON.parse(speakerData);
-
-    // Check if the data is up-to-date
-    const lastUpdated = localStorage.getItem("lastUpdated");
-    const currentTime = new Date().getTime();
-    const timeDiff = currentTime - lastUpdated;
-    const minutesDiff = Math.floor(timeDiff / 60000);
-    if (minutesDiff > 5) {
-      // If the data is not up-to-date, fetch new data
-      fetchAgendaData();
-      fetchSpeakerData();
-    } else {
-      // If the data is up-to-date, use the data from localStorage
-      printAgendaData(agendaDataParsed);
-      printSpeakerData(speakerDataParsed);
-    }
-  } else {
-    // If the data is not present in localStorage, fetch new data
-    fetchAgendaData();
-    fetchSpeakerData();
-  }
-}
-
-function fetchAgendaData() {
-  fetch(`${urlAPI}api/agenda/get-all`, requestOptions)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      const agendaData = JSON.stringify(data);
-      localStorage.setItem("agendaData", agendaData);
-      localStorage.setItem("lastUpdated", new Date().getTime());
-
-      const agendaDataParsed = JSON.parse(agendaData);
-      printAgendaData(agendaDataParsed);
-    });
-}
-
-function fetchSpeakerData() {
-  fetch(`${urlAPI}api/speaker/get-all`, requestOptions)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      const speakerData = JSON.stringify(data);
-      localStorage.setItem("speakerData", speakerData);
-      localStorage.setItem("lastUpdated", new Date().getTime());
-
-      const speakerDataParsed = JSON.parse(speakerData);
-      printSpeakerData(speakerDataParsed);
-    });
-}
-
 function printAgendaData(agendaDataParsed) {
   let timelineHTML = "";
   agendaDataParsed?.data.forEach((agenda) => {
@@ -193,11 +133,9 @@ function printSpeakerData(speakerDataParsed) {
 
 function fillSelect() {
   document.getElementById("location").innerHTML =
-    locations.reduce((tmp, x) => `${tmp}<option value="${x}">${x}</option>`, '');
+    locations.reduce((tmp, x) => `${tmp}<option value="${x}">${x}</option>`, '<option selected value="default" disabled>Select your Place of Residence</option>');
 }
 
-// fetchAgendaData();
-// fetchSpeakerData();
 getData();
 fillSelect();
 const agendaData = localStorage.getItem("agendaData");
