@@ -136,7 +136,6 @@ function fillSelect() {
     locations.reduce((tmp, x) => `${tmp}<option value="${x}">${x}</option>`, '<option selected value="default" disabled>Select your Place of Residence</option>');
 }
 
-getData();
 fillSelect();
 const agendaData = localStorage.getItem("agendaData");
 const speakerData = localStorage.getItem("speakerData");
