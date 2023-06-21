@@ -77,59 +77,8 @@ const locations = [
   "Cao Bằng"
 ]
 
-// const urlAPI = "http://103.179.190.136:70/";
-
-function printAgendaData(agendaDataParsed) {
-  let timelineHTML = "";
-  agendaDataParsed?.data.forEach((agenda) => {
-    timelineHTML += `
-            <div class="entry">
-                <div class="title">
-                    <div class="fs-38">Speaker: ${agenda.speakerModel.fullName}</div>
-                    <div class="fs-24">Topic: ${agenda.topicTalk}</div>
-                </div>
-                <div class="body fs-20">
-                    Room: ${agenda.room}
-                </div>
-            </div>
-        `;
-  });
-  // document.getElementById("datatimeline").innerHTML = timelineHTML;
-}
-
 const bgColor = ["#428EFF", "#FFBB01", "#FF5145"];
 const BG_COLOR_NUMB = 3;
-
-function printSpeakerData(speakerDataParsed) {
-  let speakerHTML = "";
-  speakerDataParsed?.data.forEach((speaker, index) => {
-    speakerHTML += `                
-            <div class="item">
-                <div class="card-style-twenty" style="background-color: ${
-                  bgColor[index % BG_COLOR_NUMB]
-                }">
-                    <img src="${urlAPI}api/check-in/images/${
-      speaker.avatar
-    }" alt="" class="speaker-image">
-                    <div class="course-data" >
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="course-by fw-bold">${speaker.fullName}</p>
-                        </div>
-                        <div>
-                            <div class="d-flex align-items-center justify-content-between mt-10 mb-10">
-                                <strong class="price fw-500 fs-20">Topic: ${
-                                  speaker.title
-                                }</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-  });
-
-  // document.getElementById("dataspeaker").innerHTML = speakerHTML;
-}
 
 function fillSelect() {
   document.getElementById("location").innerHTML =
@@ -137,10 +86,3 @@ function fillSelect() {
 }
 
 fillSelect();
-const agendaData = localStorage.getItem("agendaData");
-const speakerData = localStorage.getItem("speakerData");
-
-const agendaDataParsed = JSON.parse(agendaData);
-const speakerDataParsed = JSON.parse(speakerData);
-printAgendaData(agendaDataParsed);
-printSpeakerData(speakerDataParsed);

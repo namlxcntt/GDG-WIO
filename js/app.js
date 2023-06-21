@@ -3,6 +3,7 @@ let div2 = document.getElementById("submit-success-form");
 let div3 = document.getElementById("submit-fail-form");
 let smAgain1 = document.getElementById("submit-button-agn");
 let smAgain2 = document.getElementById("submit-button-agn-1");
+let loadingDiv = document.getElementById("loading-form");
 
 function registerAgain() {
   div1.style.cssText = "display:block !important";
@@ -14,10 +15,12 @@ function changeDiv(param) {
     div1.style.cssText = "display:none !important";
     div2.style.cssText = "display:block !important";
     div3.style.cssText = "display:none !important";
+    loadingDiv.style.cssText = "display:none !important";
   } else {
     div1.style.cssText = "display:none !important";
     div2.style.cssText = "display:none !important";
     div3.style.cssText = "display:block !important";
+    loadingDiv.style.cssText = "display:none !important";
   }
 }
 
@@ -46,6 +49,23 @@ const urlAPI = `https://gdghanoiadmin.xyz/public/create/form`;
 const form = document.getElementById("user-data-form");
 const inputsContainer = document.getElementById("form-container");
 
+function onLoading() {
+  loadingDiv.style.cssText = "display:block !important";
+  div1.style.cssText = "display:none !important";
+  div2.style.cssText = "display:none !important";
+  div3.style.cssText = "display:none !important";
+}
+const formName = [
+  "name",
+  "email",
+  "dob",
+  "location",
+  "jobTitle",
+  "yoe",
+  "company",
+  "term",
+];
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(form);
@@ -65,7 +85,7 @@ form.addEventListener("submit", (event) => {
     createTime: new Date().getTime(),
     company: formData.get("company"),
   };
-
+  onLoading();
   if (validateForm(data)) {
     const xhr = new XMLHttpRequest();
     xhr.open("POST", `${urlAPI}`);
@@ -113,7 +133,6 @@ function validateField(form, fieldName) {
       case "yoe":
         errorEl.textContent = "Year of experience is required";
         break;
-
       case "company":
         errorEl.textContent = "Company is required";
         break;
@@ -127,10 +146,11 @@ function validateField(form, fieldName) {
     return false;
   }
 
-  errorEl.textContent = "";
+  if (errorEl.textContent) errorEl.textContent = "";
   return true;
 }
 
 inputsContainer.addEventListener("focusout", (event) => {
+  if (!formName.includes(event.target.name)) return;
   if (event.target.name !== "term") validateField(form, event.target.name);
 });
