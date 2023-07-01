@@ -101,6 +101,32 @@
 ====================================================================
 
  ***/
+ .sponsor-container {
+  width: max(75%, 450px);
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sponsor {
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: grid;
+  place-items: center;
+}
+
+.w-50 {
+  width: 200px;
+}
+
+@media (min-width: 640px) {
+  .sponsor-container {
+    width: max(33%, 450px);
+  }
+}
 .ctn-preloader {
   align-items: center;
   -webkit-align-items: center;

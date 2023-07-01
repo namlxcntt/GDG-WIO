@@ -4,6 +4,7 @@ let div3 = document.getElementById("submit-fail-form");
 let smAgain1 = document.getElementById("submit-button-agn");
 let smAgain2 = document.getElementById("submit-button-agn-1");
 let loadingDiv = document.getElementById("loading-form");
+let otherJobInput = document.getElementById("otherJob");
 
 function registerAgain() {
   div1.style.cssText = "display:block !important";
@@ -59,6 +60,7 @@ const formName = [
   "name",
   "email",
   "dob",
+  "phone",
   "location",
   "jobTitle",
   "yoe",
@@ -76,6 +78,7 @@ form.addEventListener("submit", (event) => {
     fullName: formData.get("name"),
     email: formData.get("email"),
     age: formData.get("dob"),
+    phone: formData.get("phone"),
     location: formData.get("location"),
     jobTitle: formData.get("jobTitle"),
     findUs: formData.get("findUs"),
@@ -127,6 +130,9 @@ function validateField(form, fieldName) {
       case "location":
         errorEl.textContent = "Location is required";
         break;
+      case "phone":
+        errorEl.textContent = "Phone is required";
+        break;
       case "jobTitle":
         errorEl.textContent = "Job title is required";
         break;
@@ -140,7 +146,22 @@ function validateField(form, fieldName) {
 
     return false;
   }
-
+  const value = form.elements[fieldName].value;
+  if (fieldName === "phone") {
+    let isValid = true;
+    if (value.length < 10) {
+      errorEl.textContent = "Phone has 10 number.";
+      return false;
+    }
+    value.split("").forEach((c) => {
+      if (!(c >= 0 && c <= 9)) {
+        errorEl.textContent = "Invalid Phone number. Example: 0987654321";
+        isValid = false;
+        return;
+      }
+    });
+    if (!isValid) return false;
+  }
   if (fieldName === "term" && !form.elements[fieldName].checked) {
     errorEl.textContent = "Term is required";
     return false;
@@ -149,6 +170,15 @@ function validateField(form, fieldName) {
   if (errorEl.textContent) errorEl.textContent = "";
   return true;
 }
+
+const jobOpt = document.getElementById("jobOpt");
+jobOpt.addEventListener("change", (e) => {
+  if (e.target.value === "other") {
+    otherJobInput.style.cssText = "display:block !important";
+  } else {
+    otherJobInput.style.cssText = "display:none !important";
+  }
+});
 
 inputsContainer.addEventListener("focusout", (event) => {
   if (!formName.includes(event.target.name)) return;

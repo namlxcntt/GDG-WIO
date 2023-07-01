@@ -124,7 +124,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="block-style-seven wow fadeInLeft"
-                         style="visibility: visible; animation-name: fadeInLeft;">
+                         style="animation-name: fadeInLeft;">
                         <div class="title-style-one">
                             <img src="images\logo\google_io_01.webp" width="90%"
                                  style="" alt="">
@@ -472,6 +472,13 @@
                     </div>
                     <div class="col-12">
                         <div class="input-group-meta mb-30">
+                            <label>Phone number</label>
+                            <input type="text" name="phone" placeholder="0xxx xxx xxx" required>
+                            <span class="error-msg text-warning" id="phoneError"></span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group-meta mb-30">
                             <label>Year of Birth</label>
                             <input type="number" min="1960" max="2010" step="1" placeholder="Select your birth year"
                                    name="dob"
@@ -482,7 +489,7 @@
                     <div class="col-12">
                         <div class="input-group-meta mb-30">
                             <label>Job Title</label>
-                            <select type="text" name="jobTitle" required
+                            <select id="jobOpt" type="text" name="jobTitle" required
                                     style="background: transparent;border: 2px solid #000000;border-radius: 8px;color: #000000;font-family: GoogleSans;font-size: 17px;
                                         height: 60px;line-height: 25.5px;padding: 0px 52px 0px 20px; transition: all 0.3s ease-in-out 0s;width: 100%;">
                                 <option selected value="default" disabled>Select your occupation</option>
@@ -496,6 +503,15 @@
                             <span class="error-msg text-warning" id="jobTitleError"></span>
                         </div>
                     </div>
+                    <div id="otherJob" class="col-12 d-none">
+                        <div class="input-group-meta mb-30">
+                            <label>Other:</label>
+                            <input type="text" name="otherJob"
+                                   placeholder="Your occupation">
+                            <span class="error-msg text-warning" id="otherJobError"></span>
+                        </div>
+                    </div>
+
                     <div class="col-12">
                         <div class="input-group-meta mb-30">
                             <label>Company</label>
@@ -608,6 +624,35 @@
     </div> <!-- /.fancy-feature-fiftyOne -->
 
 </div>
+<section class="sponsor-container">
+    <div class="sponsor">
+      <p>Organizer</p>
+      <img src='images/sponsors/gdg.webp' />
+    </div>
+
+    <div class="sponsor">
+      <p>Core Partner</p>
+      <img class="w-50" src='images/sponsors/nic.webp' />
+    </div>
+
+    <div class="sponsor">
+      <p>Diamond Sponsor</p>
+      <img class="w-50" src='images/sponsors/apero.webp' />
+    </div>
+
+    <div class="sponsor">
+      <p>Gold Sponsor</p>
+      <img src='images/sponsors/fsoft.webp' />
+    </div>
+
+    <div class="sponsor">
+      <p>Community Partner</p>
+      <div class="flex">
+        <img src='images/sponsors/gdsc.webp' />
+        <img src='images/sponsors/spiderum.webp' />
+      </div>
+    </div>
+  </section>
 <div class="container">
     <!--
     =====================================================
