@@ -6,6 +6,7 @@ import Footer from "../partials/Footer";
 import Countdown from "../partials/Countdown";
 import AboutUs from "../partials/AboutUs";
 import Register from "../partials/Register";
+import Sponsors from "../partials/Sponsors";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
         <Countdown />
         <AboutUs />
         <Register />
+        <Sponsors />
       </main>
 
       {/*  Site footer */}
