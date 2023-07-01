@@ -8211,9 +8211,7 @@ body .btn-twentySix:hover:after {
   bottom: 0;
 }
 /*^^^^^^^^^^^^^^^^^^^^^ Footer Eleven ^^^^^^^^^^^^^^^^^^^^^^^^*/
-.footer-style-eleven {
-  padding: 150px 0 0;
-}
+
 .theme-basic-footer.footer-style-eleven .footer-title {
   color: rgba(11, 11, 11, 0.35);
   font-size: 16px;
