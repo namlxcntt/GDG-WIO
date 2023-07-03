@@ -110,6 +110,7 @@
 }
 
 .sponsor {
+  width: 100%;
   font-size: 36px;
   font-weight: 600;
   margin-top: 32px;
@@ -252,7 +253,7 @@
   overflow-x: hidden;
 }
 body {
-  font-family: "GoogleSans";
+  font-family: "GoogleSans" !important;
   font-weight: normal;
   font-size: 16px;
   position: relative;
