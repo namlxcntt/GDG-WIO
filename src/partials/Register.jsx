@@ -16,21 +16,21 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Submitted!');
+    alert("Submitted!");
   };
   return (
     <section
       id="register"
-      className="w-11/12 my-20 mx-auto relative grid lg:w-4/5 bg-register-img p-16 rounded-register bg-center bg-cover bg-no-repeat text-center items-center"
+      className="w-11/12 my-20 mx-auto relative grid lg:w-4/5 bg-register-img p-3 py-6 lg:p-6 lg:p-16 rounded-2xl lg:rounded-register bg-center bg-cover bg-no-repeat text-center items-center"
     >
-      <div className="w-4/5 absolute left-1/10 top-m-10 bg-register px-8 py-5 rounded-full text-black font-bold text-2xl border-2 border-solid border-black">
+      <div className="text-xs w-11/12 lg:w-4/5 absolute left-3 lg:left-1/10 top-m-12 lg:top-m-20 bg-cta py-2.5 px-2 lg:px-8 lg:py-5 rounded-full text-black font-bold lg:text-2xl border-2 border-solid border-black">
         Ready to Join the Google IO Extended Hanoi 2023!
       </div>
       <p className="text-white text-base mb-10 mt-5">
         Fill out this form to get the free ticket from GDG Hanoi.
       </p>
       <form className="grid place-items-center gap-8" onSubmit={handleSubmit}>
-        <div className="w-5/8 flex justify-items-center relative">
+        <div className="w-full lg:w-5/8flex justify-items-center relative">
           <input
             className="w-full rounded-full mx-auto pl-6"
             type="text"
@@ -48,7 +48,7 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="w-5/8 flex justify-items-center relative">
+        <div className="w-full lg:w-5/8flex justify-items-center relative">
           <input
             className="w-full rounded-full mx-auto pl-6"
             type="text"
@@ -66,7 +66,7 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="w-5/8 flex justify-items-center relative">
+        <div className="w-full lg:w-5/8flex justify-items-center relative">
           <input
             className="w-full rounded-full mx-auto pl-6"
             type="text"
@@ -84,7 +84,7 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="w-5/8 flex justify-items-center relative">
+        <div className="w-full lg:w-5/8flex justify-items-center relative">
           <input
             className="w-full rounded-full mx-auto pl-6"
             type="text"
@@ -110,7 +110,7 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="w-5/8 flex justify-items-center relative">
+        <div className="w-full lg:w-5/8flex justify-items-center relative">
           <input
             className="w-1/2 rounded-full mr-5 pl-6"
             type="text"
@@ -143,7 +143,7 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="w-5/8 flex justify-items-center relative">
+        <div className="w-full lg:w-5/8flex justify-items-center relative">
           <input
             className="w-1/2 rounded-full mr-5 pl-6"
             type="text"
@@ -175,7 +175,7 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="w-5/8 flex justify-items-center relative">
+        <div className="w-full lg:w-5/8flex justify-items-center relative">
           <textarea
             className="w-1/2 rounded-full mr-5 pl-6"
             name="findUs"
@@ -216,7 +216,7 @@ const Register = () => {
           </label>
         </div>
         <button
-          className="bg-cta px-8 py-5 rounded-full  text-black font-bold text-2xl"
+          className="bg-cta px-8 py-2.5 lg:py-5 rounded-full text-black font-bold text-base lg:text-2xl"
           type="submit"
         >
           Submit Form

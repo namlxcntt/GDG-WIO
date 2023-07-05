@@ -3,6 +3,8 @@ import technical from "../images/background/technical.png";
 import networking from "../images/background/networking.png";
 import exhibition from "../images/background/exhibition.png";
 import BenefitContainer from "../components/BenefitContainer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const AboutUs = () => {
   const benefits = [
@@ -45,7 +47,7 @@ const AboutUs = () => {
           partners, media agencies & news outlets.
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-benefits gap-3 w-fit mx-auto place-items-center mb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-block-info gap-3 w-fit mx-auto place-items-center mb-20">
         {benefits.map((benefit) => (
           <BenefitContainer
             key={`benefit-${benefit.header}`}

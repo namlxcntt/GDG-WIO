@@ -61,8 +61,9 @@ module.exports = {
         benefit: "550px",
         66: "16.5rem",
         form: "calc(50% + 2.25rem)",
-        "m-10": "-2.5rem",
-        "1/10": "10%"
+        "m-20": "-2.5rem",
+        "m-12": "-1.5rem",
+        "1/10": "10%",
       },
       fontFamily: {
         google: ["Google Sans Text", "sans-serif"],
@@ -133,15 +134,20 @@ module.exports = {
       backgroundColor: {
         header: "#202124",
         cta: "#FEBD01",
-        register: "#428EFE",
+        "google-speaker-1": "#38A852",
+        "google-speaker-2": "#428EFE",
+        "google-speaker-3": "#FEBD01",
+        "google-speaker-4": "#FF5145",
+        "speaker-name": "#E8EAED",
+        "speaker-title": "#202125",
       },
       gridTemplateColumns: {
         "site-navigator": "repeat(5, auto)",
         countdown: "auto auto 1fr auto auto 1fr auto auto 1fr auto auto 1fr",
-        benefits: "repeat(3, 400px)",
+        "block-info": "repeat(3, 400px)",
       },
       gridTemplateRows: {
-        benefits: "repeat(3, auto)",
+        "block-info": "repeat(3, auto)",
       },
       margin: {
         18: "72px",

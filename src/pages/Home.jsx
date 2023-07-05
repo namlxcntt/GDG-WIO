@@ -7,6 +7,7 @@ import Countdown from "../partials/Countdown";
 import AboutUs from "../partials/AboutUs";
 import Register from "../partials/Register";
 import Sponsors from "../partials/Sponsors";
+import Speakers from "../partials/Speakers";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
         <HeroHome />
         <Countdown />
         <AboutUs />
+        <Speakers />
         <Register />
         <Sponsors />
       </main>
